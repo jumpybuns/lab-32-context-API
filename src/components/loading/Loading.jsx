@@ -1,7 +1,10 @@
 import React from 'react';
 
 const Loading = () => (
-  <img src="https://images.app.goo.gl/iwt6KnFVSkQi7a8v9" alt="loading" />
+  <img
+    src="http://static.demilked.com/wp-content/uploads/2016/06/gif-animations-replace-loading-screen-14.gif"
+    alt="loading"
+  />
 );
 
 export default Loading;

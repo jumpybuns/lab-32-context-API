@@ -12,7 +12,7 @@ export default class App extends Component {
           <Header />
           <Switch>
             <Route exact path="/" component={CharactersPage} />
-            <Route path="/details/:id" component={CharacterById} />
+            <Route path="/characters/:id" component={CharacterById} />
           </Switch>
         </Router>
       </div>

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { findCharacterById, findCharacters } from '../services/rickAndMortyAPI';
-import { useAlertError } from './error';
+// import { useAlertError } from './error';
 
 export const useRickAndMortyCharacters = () => {
   const [loading, setLoading] = useState(true);
@@ -22,21 +22,18 @@ export const useRickAndMortyCharacters = () => {
 export const useCharacterById = (id) => {
   const [loading, setLoading] = useState(true);
   const [character, setCharacter] = useState(null);
-  const alertError = useAlertError();
+  // const alertError = useAlertError();
 
   useEffect(() => {
-    findCharacterById()
-      .then((character) => {
-        setCharacter(character);
-        setLoading(false);
-      })
-      .catch((err) => alertError(err));
-  }, []);
+    findCharacterById(id).then((character) => {
+      setCharacter(character);
+      setLoading(false);
+    });
+    // .catch((err) => alertError(err));
+  }, [id]);
 
   return {
     loading,
     character,
   };
 };
-
-export default useRickAndMortyCharacters;

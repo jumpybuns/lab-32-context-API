@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom';
 import Character from './Character';
 import { useCharacters } from '../../state/characterContext';
 
-const CharacterList = (id) => {
+const CharacterList = () => {
   const characters = useCharacters();
 
   const characterElements = characters.map((character) => (
     <li key={character.id}>
-      <Link to={`/characters/${id}`}>
+      <Link to={`/characters/${character.id}`}>
         <Character image={character.image} name={character.name} />
       </Link>
     </li>

@@ -21,7 +21,6 @@ export const ErrorProvider = ({ children }) => {
 
 export const useError = () => {
   const { error } = useContext(ErrorContext);
-
   return error;
 };
 
