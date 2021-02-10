@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Character from './Character';
 import { useCharacters } from '../../state/characterContext';
 
-const CharacterList = () => {
+const CharacterList = (id) => {
   const characters = useCharacters();
 
   const characterElements = characters.map((character) => (
