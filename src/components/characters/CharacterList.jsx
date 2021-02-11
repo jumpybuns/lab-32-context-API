@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Character from './Character';
 import { useCharacters } from '../../state/characterContext';
+import styles from './CharacterList.css';
 
 const CharacterList = () => {
   const characters = useCharacters();
@@ -14,7 +15,11 @@ const CharacterList = () => {
     </li>
   ));
 
-  return <ul data-testid="characters">{characterElements}</ul>;
+  return (
+    <ul className={`${styles.CharacterList}`} data-testid="characters">
+      {characterElements}
+    </ul>
+  );
 };
 
 export default CharacterList;
