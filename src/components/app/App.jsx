@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import CharactersPage from '../../pages/CharactersPage';
 import CharacterById from '../../pages/CharacterById';
 import Header from '../header/Header';
+import ThemeBeans from '../theme/ThemeToggler';
 
 export default class App extends Component {
   render() {
@@ -10,6 +11,7 @@ export default class App extends Component {
       <div>
         <Router>
           <Header />
+          <ThemeBeans />
           <Switch>
             <Route exact path="/" component={CharactersPage} />
             <Route path="/characters/:id" component={CharacterById} />
