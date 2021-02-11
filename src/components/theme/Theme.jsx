@@ -1,13 +1,10 @@
-export const lightTheme = {
-  body: '#E2E2E2',
-  text: '#363537',
-  toggleBorder: '#FFF',
-  gradient: 'linear-gradient(#39598A, #79D7ED)',
-};
+import { ThemeContext, themes } from './theme-context';
+import ThemedButton from './themed-button';
 
-export const darkTheme = {
-  body: '#363537',
-  text: '#FAFAFA',
-  toggleBorder: '#6B8096',
-  gradient: 'linear-gradient(#091236, #1E215D)',
-};
+import React, { Component } from 'react';
+
+export default class Theme extends Component {
+  render() {
+    return <div></div>;
+  }
+}

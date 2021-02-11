@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { RickAndMortyProvider } from '../state/characterContext';
 import CharacterList from '../components/characters/CharacterList';
+import ThemeProvider from '../state/theme-context';
 
 const CharactersPage = () => {
   const [Provider, characters] = useState(() => RickAndMortyProvider);
@@ -8,6 +9,7 @@ const CharactersPage = () => {
   return (
     <>
       <Provider>
+        <ThemeProvider />
         <CharacterList characters={characters} />
       </Provider>
     </>

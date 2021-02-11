@@ -1,20 +1,10 @@
-// import React, { useState } from 'react';
-// import { ThemeProvider } from 'styled-components';
-// import { darkTheme, lightTheme } from './Theme';
-// import styles from './Theme.css';
+import React from 'react';
+import { useTheme } from '../../state/theme';
 
-// function ThemeBeans() {
-//   const [theme, setTheme] = useState('light');
+const ThemeToggler = () => {
+  const theme = useTheme();
 
-//   const themeToggler = () => {
-//     theme === 'light' ? setTheme('dark') : setTheme('light');
-//   };
+  return <h1>{theme}</h1>;
+};
 
-//   return (
-//     <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
-//       <div className={styles.themebeans}></div>
-//       <button onClick={() => themeToggler()}>Change Theme</button>
-//     </ThemeProvider>
-//   );
-// }
-// export default ThemeBeans;
+export default ThemeToggler;
