@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const CharacterDetail = ({ image, name, status, species }) => (
-  <figure>
+  <figure data-testid="character">
     <img src={image} alt={name} />
     <figcaption>
       <p>{name}</p>

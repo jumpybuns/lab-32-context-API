@@ -2,7 +2,9 @@
 
 exports[`CharacterDetail component renders CharacterDetail 1`] = `
 <DocumentFragment>
-  <figure>
+  <figure
+    data-testid="character"
+  >
     <img
       alt="Morty Smith"
       src="https://rickandmortyapi.com/api/character/avatar/2.jpeg"
