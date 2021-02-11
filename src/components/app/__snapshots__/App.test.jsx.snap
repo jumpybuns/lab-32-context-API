@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App component renders App 1`] = `
+<DocumentFragment>
+  <div>
+    <div>
+      <a
+        href="/"
+      >
+        Home
+      </a>
+      <h1>
+        CONTEXT IS EVERYTHING
+      </h1>
+    </div>
+    <img
+      alt="loading"
+      src="http://static.demilked.com/wp-content/uploads/2016/06/gif-animations-replace-loading-screen-14.gif"
+    />
+  </div>
+</DocumentFragment>
+`;
