@@ -1,6 +1,7 @@
 import React, { createContext, useContext } from 'react';
 import Loading from '../components/loading/Loading';
 import { useRickAndMortyCharacters } from './characters';
+import PropTypes from 'prop-types';
 
 export const CharacterContext = createContext(null);
 
@@ -16,5 +17,10 @@ export const RickAndMortyProvider = ({ children }) => {
 
 export const useCharacters = () => {
   const { characters } = useContext(CharacterContext);
+
   return characters;
+};
+
+RickAndMortyProvider.propTypes = {
+  children: PropTypes.node.isRequired,
 };
