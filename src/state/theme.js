@@ -1,6 +1,15 @@
-import React, { useState, createContext, useContext } from 'react';
-import PropTypes from 'prop-types';
+import React, { useState } from 'react';
 
 export const useTheme = () => {
-  const [theme, setTheme];
+  const [theme, setTheme] = useState('light');
+
+  const toggle = ({ target }) => {
+    if (target.checked) setTheme('dark');
+    else setTheme('light');
+  };
+  return (
+    <>
+      <input type="checkbox" value={{ theme }} onChange={toggle} />
+    </>
+  );
 };

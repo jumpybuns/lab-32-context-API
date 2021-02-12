@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Character from './Character';
 import { useCharacters } from '../../state/characterContext';
 import styles from './CharacterList.css';
-// import { useTheme } from '../../state/theme-context';
+// import { useTheme } from '../../state/theme';
 // import ThemeProvider from '../../state/theme-context';
 
 const CharacterList = () => {
