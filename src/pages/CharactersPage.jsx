@@ -7,7 +7,6 @@ const CharactersPage = () => {
 
   return (
     <>
-      <input type="checkbox" />
       <Provider>
         <CharacterList />
       </Provider>

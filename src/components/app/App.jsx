@@ -10,7 +10,6 @@ export default class App extends Component {
       <div>
         <Router>
           <Header />
-
           <Switch>
             <Route exact path="/" component={CharactersPage} />
             <Route path="/characters/:id" component={CharacterById} />

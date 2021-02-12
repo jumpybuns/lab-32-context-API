@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Character from './Character';
 import { useCharacters } from '../../state/characterContext';
@@ -7,9 +7,9 @@ import styles from './CharacterList.css';
 // import ThemeProvider from '../../state/theme-context';
 
 const CharacterList = () => {
-  // const theme = useTheme('dark');
+  const [theme, setTheme] = useState('light');
   const characters = useCharacters();
-  console.log(characters);
+
   const characterElements = characters.map((character) => (
     <li key={character.id}>
       <Link to={`/characters/${character.id}`}>
@@ -18,10 +18,18 @@ const CharacterList = () => {
     </li>
   ));
 
+  const toggle = ({ target }) => {
+    if (target.checked) setTheme('dark');
+    else setTheme('light');
+  };
+
   return (
     <>
-      {/* <ThemeProvider /> */}
-      <ul className={`${styles.CharacterList} `} data-testid="characters">
+      <input type="checkbox" value={{ theme }} onChange={toggle} />
+      <ul
+        className={`${styles.CharacterList} ${styles[theme]}`}
+        data-testid="characters"
+      >
         {characterElements}
       </ul>
     </>
