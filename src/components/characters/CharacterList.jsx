@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom';
 import Character from './Character';
 import { useCharacters } from '../../state/characterContext';
 import styles from './CharacterList.css';
-import { useTheme } from '../../state/theme-context';
-import ThemeProvider from '../../state/theme-context';
+// import { useTheme } from '../../state/theme-context';
+// import ThemeProvider from '../../state/theme-context';
 
 const CharacterList = () => {
-  const theme = useTheme();
+  // const theme = useTheme('dark');
   const characters = useCharacters();
-
+  console.log(characters);
   const characterElements = characters.map((character) => (
     <li key={character.id}>
       <Link to={`/characters/${character.id}`}>
@@ -20,11 +20,8 @@ const CharacterList = () => {
 
   return (
     <>
-      <ThemeProvider />
-      <ul
-        className={`${styles.CharacterList} ${styles[theme]}`}
-        data-testid="characters"
-      >
+      {/* <ThemeProvider /> */}
+      <ul className={`${styles.CharacterList} `} data-testid="characters">
         {characterElements}
       </ul>
     </>

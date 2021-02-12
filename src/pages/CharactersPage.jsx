@@ -1,16 +1,15 @@
 import React, { useState } from 'react';
-import { RickAndMortyProvider } from '../state/characterContext';
 import CharacterList from '../components/characters/CharacterList';
-import ThemeProvider from '../state/theme-context';
+import { RickAndMortyProvider } from '../state/characterContext';
 
 const CharactersPage = () => {
-  const [Provider, characters] = useState(() => RickAndMortyProvider);
+  const [Provider] = useState(() => RickAndMortyProvider);
 
   return (
     <>
+      <input type="checkbox" />
       <Provider>
-        <ThemeProvider />
-        <CharacterList characters={characters} />
+        <CharacterList />
       </Provider>
     </>
   );

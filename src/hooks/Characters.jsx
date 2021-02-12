@@ -3,7 +3,7 @@ import { findCharacters } from '../services/rickAndMortyAPI';
 
 export const useCharacters = () => {
   const [loading, setLoading] = useState(true);
-  const [episodes, setCharacters] = useState([]);
+  const [characters, setCharacters] = useState([]);
 
   useEffect(() => {
     findCharacters().then((characters) => {
@@ -14,6 +14,6 @@ export const useCharacters = () => {
 
   return {
     loading,
-    episodes,
+    characters,
   };
 };
