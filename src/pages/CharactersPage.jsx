@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
-import { RickAndMortyProvider } from '../state/characterContext';
 import CharacterList from '../components/characters/CharacterList';
+import { RickAndMortyProvider } from '../state/characterContext';
 
 const CharactersPage = () => {
-  const [Provider, characters] = useState(() => RickAndMortyProvider);
+  const [Provider] = useState(() => RickAndMortyProvider);
 
   return (
     <>
       <Provider>
-        <CharacterList characters={characters} />
+        <CharacterList />
       </Provider>
     </>
   );
